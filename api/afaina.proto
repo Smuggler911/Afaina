@@ -1,0 +1,28 @@
+syntax = 'proto3';
+
+package afaina;
+
+service afainaService{
+    rpc Chat (stream ChatRequest) returns (stream ChatResponse);
+}
+
+message userMessage{
+    string  message = 1;
+}
+
+message afainaMessage{
+    string responseMessage = 1;
+}
+
+message ChatRequest{
+    oneof request{
+        userMessage  msg = 1;
+    }
+}
+
+message ChatResponse{
+    oneof  response {
+        afainaMessage msg = 1;
+    }
+}
+

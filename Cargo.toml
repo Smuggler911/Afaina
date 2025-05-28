@@ -1,0 +1,19 @@
+[package]
+name = "Afaina"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+prost ='0.13'
+tonic = '0.13.0'
+tonic-reflection = "0.13.0"
+tokio = { version = "1", features = ["full"] }
+futures = "0.3"
+dotenv = "0.15.0"
+chrono = "0.4.9"
+serde = "1.0.190"
+ollama-rs = { version = "0.2.6", features = ["stream"] }
+modelfile = "0.3.0"
+async-stream = "0.3.6"
+[build-dependencies]
+tonic-build = "0.13.0"
